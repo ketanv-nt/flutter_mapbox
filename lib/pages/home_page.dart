@@ -44,12 +44,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             ),
             layers: [
               TileLayerOptions(
-                urlTemplate:
-                    "https://api.mapbox.com/styles/v1/dhruv25/{mapStyleId}/tiles/256/{z}/{x}/{y}@2x?access_token={accessToken}",
-                additionalOptions: {
-                  'mapStyleId': AppConstants.mapBoxStyleId,
-                  'accessToken': AppConstants.mapBoxAccessToken,
-                },
+                urlTemplate: AppConstants.mapTemplate,
+                // additionalOptions: {
+                //   'mapStyleId': AppConstants.mapBoxStyleId,
+                //   'accessToken': AppConstants.mapBoxAccessToken,
+                // },
               ),
               MarkerLayerOptions(
                 markers: [
